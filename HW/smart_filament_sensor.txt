@@ -1,0 +1,14 @@
+[filament_motion_sensor filament_sensor]
+detection_length: 10
+extruder: extruder
+switch_pin: PG11
+pause_on_runout: True
+insert_gcode:
+    M117 Insert Detected
+runout_gcode:
+    M117 Runout Detected
+    CHANGE_FILAMENT
+    #G91
+    #G1 Z20 F900 ;Raise Z away from print
+    #LCDRGB R=1 G=0 B=0  # Turn LCD red
+    #BEEP I=12
