@@ -1,14 +1,15 @@
-[mcu EBBCan]
+[mcu EBB36]
 ## canbus_uuid: 4043f46bb2b2
+serial: /dev/serial/by-id/usb-Klipper_stm32g0b1xx_3F0024000C50415833323720-if00
 serial: /dev/serial/by-id/usb-Klipper_stm32g0b1xx_3F0024000C50415833323720-if00
 
 [extruder]
 #step_pin: PE2
-step_pin: EBBCan: PD0
+step_pin: EBB36: PD0
 #dir_pin: PE3
-dir_pin: EBBCan: PD1
+dir_pin: EBB36: PD1
 #enable_pin: !PD4
-enable_pin: !EBBCan: PD2
+enable_pin: !EBB36: PD2
 max_extrude_cross_section: 5
 ##  Update value below when you perform extruder calibration
 ##  If you ask for 100mm of filament, but in reality it is 98mm:
@@ -26,8 +27,8 @@ microsteps: 16
 full_steps_per_rotation: 200    #200 for 1.8 degree, 400 for 0.9 degree
 nozzle_diameter: 0.400
 filament_diameter: 1.75
-heater_pin: EBBCan: PB13
-sensor_pin: EBBCan: PA3
+heater_pin: EBB36: PB13
+sensor_pin: EBB36: PA3
 ## heater_pin: PA2
 ## Check what thermistor type you have. See https://www.klipper3d.org/Config_Reference.html#common-thermistors for common thermistor types.
 ## Use "Generic 3950" for NTC 100k 3950 thermistors
@@ -52,7 +53,7 @@ max_extrude_only_distance: 500
 ##  Make sure to update below for your relevant driver (2208 or 2209)
 [tmc2209 extruder]
 ## uart_pin: PE1
-uart_pin: EBBCan: PA15
+uart_pin: EBB36: PA15
 interpolate: false
 run_current: 0.5
 sense_resistor: 0.110
@@ -67,8 +68,8 @@ probe_points:
     175, 175, 20  # an example
 
 [adxl345]
-cs_pin: EBBCan:PB12
-spi_software_sclk_pin: EBBCan:PB10
-spi_software_mosi_pin: EBBCan:PB11
-spi_software_miso_pin: EBBCan:PB2
+cs_pin: EBB36:PB12
+spi_software_sclk_pin: EBB36:PB10
+spi_software_mosi_pin: EBB36:PB11
+spi_software_miso_pin: EBB36:PB2
 axes_map: x,y,z
