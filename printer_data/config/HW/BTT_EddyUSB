@@ -13,7 +13,7 @@ sensor_type: ldc1612
 z_offset: 1.0
 #i2c_address:
 i2c_mcu: eddy
-i2c_bus: i2c0f
+#i2c_bus: i2c0f
 x_offset: 0 # Set according to the actual offset relative to the nozzle
 y_offset: 20 # Set according to the actual offset relative to the nozzle
 data_rate: 500
@@ -22,18 +22,3 @@ data_rate: 500
 sensor_type: Generic 3950
 sensor_pin: eddy:gpio26
 horizontal_move_z: 2
-
-[bed_mesh]
-horizontal_move_z: 2
-speed: 300
-mesh_min: 10, 10
-mesh_max: 320, 320
-probe_count: 9, 9
-algorithm: bicubic
-
-
-[safe_z_home]
-home_xy_position: 175, 175
-z_hop: 10
-z_hop_speed: 25
-speed: 200
